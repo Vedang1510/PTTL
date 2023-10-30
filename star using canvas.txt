@@ -1,0 +1,37 @@
+<!doctype html>
+<head>
+<style> body {
+margin: 10px; padding: 10px;
+}
+</style>
+<title>Star Shape</title>
+</head>
+<body>
+<center><canvas id="mycanvas1" width="1000" height="600" style="border:5px solid green"></canvas></center>
+<script>
+var canvas = document.getElementById('mycanvas1');
+var context = canvas.getContext('2d'); context.beginPath(); context.moveTo(150, 200);
+context.lineTo(306, 200); context.strokeStyle = "blue" context.stroke(); context.lineTo(180, 270); context.strokeStyle = "green"; context.stroke(); context.lineTo(228, 140); context.strokeStyle = "Yellow"; context.stroke(); context.lineTo(278, 270); context.strokeStyle = "skyblue"; context.stroke(); context.lineTo(150, 200);
+context.lineWidth = 4; context.strokeStyle = "darkblue"; context.fillStyle = 'red'; context.fill();
+context.stroke();
+</script>
+</body>
+</html><!doctype html>
+<head>
+<style> body {
+margin: 10px; padding: 10px;
+}
+</style>
+<title>Star Shape</title>
+</head>
+<body>
+<center><canvas id="mycanvas1" width="1000" height="600" style="border:5px solid green"></canvas></center>
+<script>
+var canvas = document.getElementById('mycanvas1');
+var context = canvas.getContext('2d'); context.beginPath(); context.moveTo(150, 200);
+context.lineTo(306, 200); context.strokeStyle = "blue" context.stroke(); context.lineTo(180, 270); context.strokeStyle = "green"; context.stroke(); context.lineTo(228, 140); context.strokeStyle = "Yellow"; context.stroke(); context.lineTo(278, 270); context.strokeStyle = "skyblue"; context.stroke(); context.lineTo(150, 200);
+context.lineWidth = 4; context.strokeStyle = "darkblue"; context.fillStyle = 'red'; context.fill();
+context.stroke();
+</script>
+</body>
+</html>

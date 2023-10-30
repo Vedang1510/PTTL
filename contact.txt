@@ -1,0 +1,19 @@
+x<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Meta tags and styles here -->
+</head>
+<body>
+<header>
+<!-- Header content here -->
+</header>
+<div class="container">
+<h2>Contact Me</h2>
+<p>Email: Aasif@example.com</p>
+<p>Phone: +1 123-456-7890</p>
+</div>
+<script>
+// Add more scripts if needed
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+import java.io.File;
+import javax.xml.parsers.DocumentBuilder; import
+javax.xml.parsers.DocumentBuilde
+rFactory; import javax.xml.xpath.XPath; import javax.xml.xpath.XPathConst ants; import javax.xml.xpath.XPathExpre ssion; import javax.xml.xpath.XPathFacto ry; import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+public class XPathExample { public static void
+main(String[] args) {
+try {
+File xmlFile = new File("bookstore.xml"); DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance(); DocumentBuilder builder =
+factory.newDocumentBuilder();
+Document document = builder.parse(xmlFile); XPathFactory xPathFactory =
+XPathFactory.newInstance(); XPath xPath = xPathFactory.newXPath();
+XPathExpression expression = xPath.compile("/bookstore/book[price > 35]/price");
+NodeList nodeList = (NodeList) expression.evaluate(document, XPathConstants.NODESET);
+for (int i = 0; i < nodeList.getLength(); i++) { System.out.println("Price: " + nodeList.item(i).getTextContent());
+}
+} catch (Exception e) {
+e.printStackTrace();
+}
+}
+}
+bookstore.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+<book>
+<title>Book 1</title>
+<author>Author 1</author>
+<price>40.0</price>
+</book>
+<book>
+<title>Book 2</title>
+<author>Author 2</author>
+<price>30.0</price>
+</book>
+<book>
+<title>Book 3</title>
+<author>Author 3</author>
+<price>50.0</price>
+</book>
+<book>
+<title>Book 4</title>
+<author>Author 4</author>
+<price>25.0</price>
+</book>
+</bookstore>

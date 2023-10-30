@@ -1,0 +1,31 @@
+<!doctype html>
+<head>
+<style>
+<body> { margin: 100px; padding: 100px;
+}
+</style>
+</head>
+<center>
+<body>
+<h3 style="font-size:30px;color:black"><u>College Data</u></h3>
+<canvas id="canvas" width="500" height="500" style="border:10px solid black">
+</canvas>
+<script>
+var can = document.getElementById("canvas"); var c = can.getContext("2d");
+var data = [75, 55, 40, 50, 25];
+c.fillStyle = "cyan"; c.fillRect(0, 0, 500, 500);
+var colors = ["blue", "green", "yellow", "orange", "red"]; for (var i = 0; i < data.length; i++) {
+c.fillStyle = colors[i]; var dp = data[i];
+c.fillRect(25 + i * 100, 500 - dp * 5 - 30, 50, dp * 5);
+}
+var labels = ["COMP", "IT", "E&TC", "MECH", "ELEC"];
+c.fillStyle = "black";
+for (var j = 0; j < 5; j++) { c.fillText(labels[j], 30 + j * 100, 488);
+}
+c.fillStyle = "black"; c.lineWidth = 2.0; c.beginPath(); c.moveTo(15, 50);
+c.lineTo(15, 470);
+c.lineTo(490, 470); c.stroke();
+</script>
+<h4 style="font-size:15px;color:black"><u> LIST OF STUDENTS IN DIFFERENT BRANCHES IN COLLEGE</u></h4>
+</body>
+</html>

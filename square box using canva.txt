@@ -1,0 +1,18 @@
+<!doctype html>
+<head>
+<style> body {
+margin: 10px; padding: 10px;
+}
+</style>
+<title>Square Shape</title>
+</head>
+<body>
+<center><canvas id="mycanvas1" width="1000" height="600" style="border:5px solid orange"></canvas></center>
+<script>
+var canvas = document.getElementById('mycanvas1');
+var context = canvas.getContext('2d'); context.beginPath(); context.moveTo(20, 70);
+context.rect(400, 200, 200, 150);
+context.lineWidth = 3; context.fillStyle = "yellow"; context.fill(); context.strokeStyle = "red"; context.stroke(); context.closePath();
+</script>
+</body>
+</html>

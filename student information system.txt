@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+STUDENT'S RECORD SYSTEM
+</title>
+<h1 style="background-color:yellow;text-align:center;font size=15px;margin- left:100;margin-right:100"><b>
+<hr>STUDENT'S RECORD SYSTEM
+</b> </h1>
+<pre
+style="text-align:center;font size=20px;border:6px solid black;margin- left:100;margin-right:100;margin-top:0px;">
+<script>
+function myfun() {
+var a = document.form1.txtname.value; var b = document.form1.txtclass.value; var c = document.form1.txtprn.value;
+var d = document.form1.BRANCH.value; var e = document.form1.txtdob.value;
+var f = document.form1.txtaddress.value; var g = document.form1.txtcontact.value; var h = document.form1.txtemail.value; var g = document.form1.txtpass.value;
+var nameRegex = /^[A-Za-z\s]+$/; var emailRegex = /^\S+@\S+\.\S+$/;
+var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/; if (!a.match(nameRegex)) {
+alert("Name must contain only letters and spaces."); return false;
+}
+if (!h.match(emailRegex)) { alert("Invalid email address."); return false;
+}
+if (!g.match(passwordRegex)) {
+alert("Password must be at least 6 characters long and contain one uppercase letter, one lowercase letter, and one digit.");
+return false;
+}
+document.getElementById("demoname").innerHTML = a; document.getElementById("democlass").innerHTML = b; document.getElementById("demoprn").innerHTML = c; document.getElementById("demodepartment").innerHTML = d; document.getElementById("demodob").innerHTML = e; document.getElementById("demoaddress").innerHTML = f; document.getElementById("democontact").innerHTML = g; document.getElementById("demoemail").innerHTML = h; document.getElementById("demopass").innerHTML = g;
+}
+</script>
+<script type="text/javascript"> function bgChange(bg) { document.body.style.background = bg;
+}
+</script>
+<table width="50" height="30">
+<tr>
+<td onmouseover="bgChange('orange')" onmouseout="bgChange('transparent')" bgcolor="orange">
+</td>
+<td onmouseover="bgChange('cyan')" onmouseout="bgChange('transparent')" bgcolor="cyan">
+</td>
+<td onmouseover="bgChange('green')" onmouseout="bgChange('transparent')" bgcolor="green">
+</td>
+</tr>
+</head>
+<body>
+<div class="color">
+<h1><legend>STUDENT'S INFORMATION SYSTEM</h1>
+<table align="center" id="tbl"><width="200">
+<form name="form1">
+<tr>
+<td width="200" >Name: </td> <td> <input type="text" name="txtname"></td></tr>
+<tr><td width="200" >Class : </td> <td> <input type="text" name="txtclass"></td></tr>
+<tr><td width="200" >PRN : </td> <td> <input type="text" name="txtprn"></td></tr>
+<tr><td width="200" >Department: </td> <td>
+COMPUTER SCIENCE :<input type="radio" name="BRANCH" value="Comp"/>
+<br>INFORMATION TECHNOLOGY :<input type="radio" name="BRANCH" value="IT"/></br>
+CIVIL ENGINEERING :<input type="radio" name="BRANCH" value="Civil"/> <br> MECHANICAL ENGINEERING :<input type="radio" name="BRANCH" value="Mech"/></br>
+CHEMICAL ENGINEERING :<input type="radio" name="BRANCH" value="Chem"/> <br> ELECTRICAL ENGINEERING :<input type="radio" name="BRANCH" value="Electrical"/></br>
+ELECTRONICS & T.C. :<input type="radio" name="BRANCH"value="E&TC"/>
+<br> PRODUCTION ENGINEERING:<input type="radio" name="BRANCH" value="Prod"/></br></td></tr>
+<tr><td width="200" >D.O.B. : </td> <td> <input type="text" name="txtdob"></td></tr>
+<tr><td width="200" >Address : </td> <td> <input type="text" name="txtaddress"></td></tr>
+<tr><td width="200" >Contact No. : </td> <td> <input type="text" name="txtcontact"></td></tr>
+<tr><td width="200" >E-mail : </td> <td> <input type="text" name="txtemail"></td></tr>
+<tr><td width="200" >Password : </td> <td> <input type="password" name="txtpass"></td></tr>
+</tr>
+</table>
+<div class="btn">
+<center><button style="font-size:14" type="button" onclick='return myfun()'>Submit</button></center>
+</div>
+<center>
+<div class="demo" >
+<table border="2">
+<tr>
+<th width="120";> STUDENT'S INFORMATION</th>
+</tr>
+<tr>
+<td width="135" >Name: </td><td width="135"><font face="century" id="demoname"></font></td></tr>
+<tr><td width="135" >Class: </td><td width="135"><font face="century" id="democlass"></font></td></tr>
+<tr><td width="135" >PRN: </td><td width="135"><font face="century" id="demoprn"></font></td></tr>
+<tr><td width="135" >Department: </td><td width="135"><font face="century" id="demodepartment"></font></td>
+<tr><td width="135" >D.O.B. : </td><td width="135"><font face="century" id="demodob"></font></td></tr>
+<tr><td width="135" >Address: </td><td width="135"><font face="century" id="demoaddress"></font></td></tr>
+<tr><td width="135" >Contact: </td><td width="135"><font face="century" id="democontact"></font></td></tr>
+<tr><td width="135" >E-mail: </td><td width="135"><font face="century" id="demoemail"></font></td></tr>
+<tr><td width="135" >Password: </td><td width="135"><font face="century" id="demopass"></font></td></tr>
+</tr>
+</table>
+</div>
+</center>
+</form>
+</body>
+</html>
